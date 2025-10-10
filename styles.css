@@ -114,24 +114,34 @@ footer { text-align: center; padding: 1rem; background: var(--brand-900); color:
     .hero { padding: 4.5rem 1.25rem; }
 }
 
-/* ===== Footer reveal + sticky-at-bottom when short ===== */
-html, body { height: 100%; }
-body { min-height: 100dvh; display: flex; flex-direction: column; }
+/* Add spacing for footer to prevent overlap */
+body { position: relative; min-height: 100vh; padding-bottom: 80px; box-sizing: border-box; }
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    background-color: var(--brand-900);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
 
-/* For short pages, this pushes the footer to the bottom */
-footer { margin-top: auto; }
-
-/* For long pages, we switch the footer to a slide-up bar */
 footer.footer-reveal {
-  position: fixed;
-  left: 0; right: 0; bottom: 0;
-  transform: translateY(105%);
-  opacity: 0;
-  transition: transform .25s ease, opacity .25s ease;
-  will-change: transform;
-  z-index: 50;
+    transform: translateY(105%);
+    opacity: 0;
+    transition: transform .25s ease, opacity .25s ease;
+    will-change: transform;
 }
 footer.footer-reveal.show {
-  transform: translateY(0);
-  opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* This padding ensures the footer does not cover the page content */
+main, section.content, .content {
+    margin-bottom: 100px; /* extra breathing room for bottom bar */
 }
