@@ -1,53 +1,66 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Collin Sargent</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Collin Sargent</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1><a href="index.html">Collin Sargent</a></h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html" class="active">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <h1><a href="index.html">Collin Sargent</a></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button id="themeToggle" class="btn small" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+    </header>
 
-  <main class="content">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Amazon DSP Data Warehouse</h3>
-      <p>
-        Designed a full SQL Server data model for analyzing Amazon delivery
-        route efficiency. Built ingestion scripts in Python using Pandas and
-        pyodbc, and created dashboards for operational insights.
-      </p>
-    </div>
 
-    <div class="project">
-      <h3>Cosine Calculator & Spline Interpolation</h3>
-      <p>
-        Developed polynomial and spline interpolation algorithms using Chebyshev
-        nodes and Newton’s divided differences for accurate trigonometric
-        function approximation.
-      </p>
-    </div>
+    <main class="content">
+        <h2>Projects</h2>
 
-    <div class="project">
-      <h3>Optimization Algorithms in Python</h3>
-      <p>
-        Implemented and visualized gradient descent and quasi-Newton methods
-        (BFGS, DFP) for convex optimization problems from scratch.
-      </p>
-    </div>
-  </main>
+            <div class="controls">
+                <input id="search" class="input" type="search" placeholder="Search projects…" aria-label="Search projects" />
+                <select id="sort" class="input" aria-label="Sort projects">
+                    <option value="title-asc">Title A→Z</option>
+                    <option value="title-desc">Title Z→A</option>
+            </select>
+        </div>
 
-  <footer>
-    <p>&copy; 2025 Collin Sargent</p>
-  </footer>
+        <div id="projectGrid" class="grid">
+            <article class="card" data-title="Amazon DSP Data Warehouse" id="dsp">
+                <h3>Amazon DSP Data Warehouse</h3>
+                <p>SQL Server schema (dsp.Associate, dsp.Itineraries, etc.), Python ingestion with Pandas + pyodbc, and performance dashboards.</p>
+                <ul class="tags"><li>SQL</li><li>Python</li><li>ETL</li></ul>
+            </article>
+
+            <article class="card" data-title="Interpolation Toolkit" id="interp">
+                <h3>Interpolation Toolkit</h3>
+                <p>Chebyshev nodes, Newton’s divided differences, and clamped cubic splines for smooth approximations.</p>
+                <ul class="tags"><li>Numerical</li><li>Python</li></ul>
+            </article>
+
+            <article class="card" data-title="Optimization Algorithms" id="opt">
+                <h3>Optimization Algorithms</h3>
+                <p>From-scratch BFGS/DFP implementations with step-size strategies and contour visualizations.</p>
+                <ul class="tags"><li>Optimization</li><li>Python</li></ul>
+            </article>
+
+
+            <article class="card" data-title="Android App – DSP Logistics">
+                <h3>Android App – DSP Logistics</h3>
+                <p>Navigation Drawer app with login, theme, and a messaging workflow for DSP ops.</p>
+                <ul class="tags"><li>Android</li><li>Kotlin</li></ul>
+            </article>
+        </div>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2025 Collin Sargent</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,34 +1,54 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Collin Sargent | Mathematics & Data Science</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collin Sargent | Mathematics & Data Science</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1><a href="index.html">Collin Sargent</a></h1>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <h1><a href="index.html">Collin Sargent</a></h1>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button id="themeToggle" class="btn small" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+    </header>
 
-  <main class="hero">
-    <h2> Mathematics & Data Science</h2>
-    <p>
-      I'm a data-driven problem solver with a passion for building models,
-      optimizing systems, and uncovering insights through mathematics and code.
-    </p>
-    <a href="projects.html" class="btn">View My Work</a>
-  </main>
+    <main class="hero">
+        <h2>Mathematics & Data Science</h2>
+        <p>
+            I'm a data-driven problem solver with a passion for building models, optimizing systems, and uncovering insights through mathematics and code.
+        </p>
+        <a href="projects.html" class="btn">View My Work</a>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Collin Sargent | <a href="mailto:collinsargent@email.com">Email Me</a></p>
-  </footer>
-  <script src="script.js"></script>
+    <section class="content narrow">
+        <h2>Featured Projects</h2>
+        <div class="grid">
+            <article class="card">
+                <h3>Amazon DSP Data Warehouse</h3>
+                <p>SQL Server data model, Python ingestion, and dashboards for route efficiency.</p>
+                <a class="chip" href="projects.html#dsp">Details</a>
+            </article>
+            <article class="card">
+                <h3>Interpolation Toolkit</h3>
+                <p>Chebyshev nodes, Newton’s divided differences, and cubic splines.</p>
+                <a class="chip" href="projects.html#interp">Details</a>
+            </article>
+            <article class="card">
+                <h3>Optimization Algorithms</h3>
+                <p>From-scratch BFGS/DFP with visualizations for convex problems.</p>
+                <a class="chip" href="projects.html#opt">Details</a>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Collin Sargent | <a href="mailto:collinsargent@email.com">Email Me</a></p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
