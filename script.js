@@ -32,12 +32,21 @@
 
     // Project Grid: interactive hover glow follows cursor
     document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('pointermove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left; const y = e.clientY - rect.top;
-            card.style.setProperty('--mx', x + 'px');
-            card.style.setProperty('--my', y + 'px');
-        });
+    const set = (e) => {
+        const rect = card.getBoundingClientRect();
+        const cx = ('clientX' in e && e.clientX) || (e.touches && e.touches[0]?.clientX);
+        const cy = ('clientY' in e && e.clientY) || (e.touches && e.touches[0]?.clientY);
+        if (cx == null || cy == null) return;
+        const x = Math.round(cx - rect.left);
+        const y = Math.round(cy - rect.top);
+        card.style.setProperty('--mx', x);
+        card.style.setProperty('--my', y);
+    };
+
+    card.addEventListener('pointermove', set);
+    card.addEventListener('mousemove', set);   // Safari fallback
+    card.addEventListener('touchmove', set, { passive: true });
+    card.addEventListener('pointerenter', set);
     });
 
     // Simple client-side search + sort on /projects.html
