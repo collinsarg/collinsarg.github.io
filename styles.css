@@ -1,0 +1,103 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f8f9fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #0a2342;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a {
+  color: #cfd8e3;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a.active,
+nav a:hover {
+  color: #ffffff;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom right, #0a2342, #1a4b8c);
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: #ffffff;
+  color: #0a2342;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #cfd8e3;
+}
+
+/* Content pages */
+.content {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.content h2 {
+  color: #0a2342;
+  margin-bottom: 1rem;
+}
+
+.project {
+  margin-bottom: 2rem;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contact-list li {
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0a2342;
+  color: white;
+  margin-top: 3rem;
+}
