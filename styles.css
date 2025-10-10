@@ -113,3 +113,25 @@ footer { text-align: center; padding: 1rem; background: var(--brand-900); color:
 @media (max-width: 480px) {
     .hero { padding: 4.5rem 1.25rem; }
 }
+
+/* ===== Footer reveal + sticky-at-bottom when short ===== */
+html, body { height: 100%; }
+body { min-height: 100dvh; display: flex; flex-direction: column; }
+
+/* For short pages, this pushes the footer to the bottom */
+footer { margin-top: auto; }
+
+/* For long pages, we switch the footer to a slide-up bar */
+footer.footer-reveal {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  transform: translateY(105%);
+  opacity: 0;
+  transition: transform .25s ease, opacity .25s ease;
+  will-change: transform;
+  z-index: 50;
+}
+footer.footer-reveal.show {
+  transform: translateY(0);
+  opacity: 1;
+}

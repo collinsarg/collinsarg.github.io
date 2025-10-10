@@ -49,6 +49,32 @@
     card.addEventListener('pointerenter', set);
     });
 
+    // ===== Footer reveal behavior =====
+    const footer = document.querySelector('footer');
+    const THRESHOLD = 4; // px from the very bottom to trigger reveal
+
+    const evaluateFooterMode = () => {
+        if (!footer) return;
+        const doc = document.documentElement;
+        const longPage = doc.scrollHeight - window.innerHeight > 8;
+        if (longPage) {
+            footer.classList.add('footer-reveal');
+            toggleFooter(); // set initial state based on current scroll
+        } else {
+            footer.classList.remove('footer-reveal', 'show');
+        }
+    };
+
+    const toggleFooter = () => {
+        if (!footer || !footer.classList.contains('footer-reveal')) return;
+        const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - THRESHOLD;
+        footer.classList.toggle('show', atBottom);
+    };
+
+    window.addEventListener('scroll', toggleFooter, { passive: true });
+    window.addEventListener('resize', evaluateFooterMode);
+    evaluateFooterMode();
+
     // Simple client-side search + sort on /projects.html
     const grid = document.getElementById('projectGrid');
     const search = document.getElementById('search');
