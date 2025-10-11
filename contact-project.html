@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact about Project • Collin Sargent</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    form .row { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+    form label { font-weight: 600; }
+    form input, form textarea { margin-top: .35rem; }
+  </style>
+</head>
+<body>
+<header>
+  <h1><a href="index.html">Collin Sargent</a></h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+  <button id="themeToggle" class="btn small" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+</header>
+
+<main class="content">
+  <h2>Contact about <span id="projName">this project</span></h2>
+  <p class="muted">Fill this out and it will open your email with a pre‑filled message. For a direct submit without opening email, you can wire this to Formspree or EmailJS (see notes in script.js).</p>
+
+  <form id="contactProjectForm" class="card" style="padding:1.25rem; max-width: 860px;">
+    <input type="hidden" id="projectSlug" />
+    <div class="row">
+      <div>
+        <label for="name">Your Name</label>
+        <input id="name" class="input" type="text" placeholder="Jane Doe" required />
+      </div>
+      <div>
+        <label for="email">Your Email</label>
+        <input id="email" class="input" type="email" placeholder="jane@example.com" required />
+      </div>
+    </div>
+    <div style="margin-top:.75rem;">
+      <label for="message">Message</label>
+      <textarea id="message" class="input" rows="6" placeholder="Tell me a bit about your needs or questions…" required></textarea>
+    </div>
+    <div class="actions">
+      <button class="btn" type="submit">Send Email</button>
+      <a class="btn" href="projects.html" style="margin-left:.5rem;">Cancel</a>
+    </div>
+  </form>
+</main>
+
+<footer><p>&copy; 2025 Collin Sargent</p></footer>
+<script src="project-data.js"></script>
+<script src="script.js"></script>
+<script>
+  setupContactProject();
+</script>
+</body>
+</html>

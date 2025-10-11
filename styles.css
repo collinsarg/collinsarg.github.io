@@ -115,7 +115,7 @@ footer { text-align: center; padding: 1rem; background: var(--brand-900); color:
 }
 
 /* Add spacing for footer to prevent overlap */
-body { position: relative; min-height: 100vh; padding-bottom: 90px; box-sizing: border-box; }
+body { position: relative; min-height: 100vh; padding-bottom: 100px; box-sizing: border-box; }
 footer {
     position: fixed;
     left: 0;
@@ -145,3 +145,6 @@ footer.footer-reveal.show {
 main, section.content, .content {
     margin-bottom: 100px; /* extra breathing room for bottom bar */
 }
+
+/* helper */
+.muted { color: var(--muted); }

@@ -109,3 +109,105 @@
         sort.addEventListener('change', apply);
     }
 })();
+/* ===== Portfolio Add‑ons ===== */
+
+// Navigate from project cards to detail page
+(() => {
+  const grid = document.getElementById('projectGrid');
+  if (!grid) return;
+  grid.addEventListener('click', (e) => {
+    const card = e.target.closest('.card');
+    if (!card) return;
+    const slug = card.getAttribute('data-slug');
+    if (!slug) return;
+    // Avoid following clicks on links/buttons inside card if any later
+    if (e.target.tagName === 'A' || e.target.closest('a')) return;
+    window.location.href = `project.html?slug=${encodeURIComponent(slug)}`;
+  });
+})();
+
+// Utility: get URL query param
+function getParam(name) {
+  const url = new URL(window.location.href);
+  return url.searchParams.get(name);
+}
+
+// Render a detail page from window.PROJECTS
+function renderProjectPage() {
+  const container = document.getElementById('projectSection');
+  if (!container || !window.PROJECTS) return;
+  const slug = getParam('slug') || 'dsp';
+  const proj = window.PROJECTS[slug];
+  if (!proj) {
+    container.innerHTML = `<p class="muted">Project not found.</p>`;
+    return;
+  }
+  const tagChips = (proj.tags || []).map(t => `<li>${t}</li>`).join('');
+  const details = (proj.details || []).map(d => `<li>${d}</li>`).join('');
+  const images = (proj.images || []).map(src => `<img src="${src}" alt="${proj.title} snapshot" loading="lazy" />`).join('');
+
+  container.innerHTML = `
+    <div class="project-hero">
+      <div class="card">
+        <h2>${proj.title}</h2>
+        <p style="color:var(--muted)">${proj.summary}</p>
+        <ul class="taglist">${tagChips}</ul>
+        <div class="actions">
+          <a class="btn" href="contact-project.html?slug=${encodeURIComponent(proj.slug)}">Contact about this project</a>
+          <a class="btn" href="projects.html">Back to Projects</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Screenshots</h3>
+        <div class="gallery" style="margin-top:.5rem">${images || '<p class="muted">Add images in project-data.js</p>'}</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:1rem">
+      <h3>Highlights</h3>
+      <ul style="margin-left:1.2rem; margin-top:.5rem;">${details}</ul>
+    </div>
+  `;
+}
+
+// Contact form for a specific project
+function setupContactProject() {
+  const slug = getParam('slug') || 'dsp';
+  const proj = (window.PROJECTS && window.PROJECTS[slug]) || { title: 'this project', slug };
+  const form = document.getElementById('contactProjectForm');
+  const label = document.getElementById('projName');
+  const hidden = document.getElementById('projectSlug');
+  if (label) label.textContent = proj.title;
+  if (hidden) hidden.value = slug;
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const msg = document.getElementById('message').value.trim();
+    // TODO: Replace with your email
+    const to = 'you@example.com';
+    const subject = encodeURIComponent(`Inquiry about ${proj.title}`);
+    const body = encodeURIComponent(
+`Project: ${proj.title} (${proj.slug})
+From: ${name} <${email}>
+
+${msg}`);
+    // Mailto fallback (works on GitHub Pages without a backend)
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+  });
+}
+
+/* === Notes for a serverless direct submit ===
+  If you prefer a submission that doesn't open the user's email client,
+  you can replace the mailto logic above with Formspree or EmailJS.
+
+  Example (Formspree):
+    1) Create a form endpoint at https://formspree.io/f/XXXXYYYY
+    2) In contact-project.html: <form action="https://formspree.io/f/XXXXYYYY" method="POST">
+    3) Add fields: <input name="project" value="..."> etc.
+    4) On success, show a thank-you message.
+
+  This note is purely instructional and has no effect at runtime.
+*/
