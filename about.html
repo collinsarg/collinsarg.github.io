@@ -1,37 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Collin Sargent</title>
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-    <header>
-        <h1><a href="index.html">Collin Sargent</a></h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <button id="themeToggle" class="btn small" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
-    </header>
+<main class="content">
+  <section class="about-hero">
+    <div class="about-photo">
+      <!-- Replace with your image path -->
+      <img src="images/collin-headshot.jpeg" alt="Portrait of Collin Sargent" />
+    </div>
 
-    <main class="content">
-        <h2>About Me</h2>
-        <p>
-        I’m a graduate in Mathematics with a Computer Science minor from Western Washington University. My work bridges theory and application—from relational data models and SQL engineering to numerical analysis and optimization.
-        </p>
-        <p>
+    <div class="about-intro">
+      <h2>About Me</h2>
+
+      <p class="lead">
+        I’m a Mathematics graduate with a Computer Science minor from Western Washington University.
+        I bridge theory and application—from relational data modeling and SQL engineering to numerical analysis and optimization.
+      </p>
+
+      <p>
         I enjoy building clean data pipelines, modeling complex systems, and telling compelling stories with data.
-        </p>
-    </main>
+      </p>
 
+      <div class="about-cta">
+        <a class="btn" href="projects.html">View Projects</a>
+        <a class="btn outline" href="contact.html">Get in Touch</a>
+        <!-- Optional: add your resume -->
+        <!-- <a class="btn small" href="assets/Collin_Sargent_Resume.pdf" target="_blank" rel="noopener">Resume</a> -->
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Collin Sargent</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+  <section class="about-grid">
+    <div class="card">
+      <h3>Quick Highlights</h3>
+      <ul class="bullets">
+        <li>Data engineering focus: SQL, pipelines, and analytics-ready schemas</li>
+        <li>Strong math foundation: optimization, modeling, and numerical methods</li>
+        <li>Practical builder: turning messy inputs into reliable, repeatable outputs</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Core Skills</h3>
+      <div class="tag-list">
+        <span class="tag">SQL</span>
+        <span class="tag">Data Modeling</span>
+        <span class="tag">Python</span>
+        <span class="tag">ETL / ELT</span>
+        <span class="tag">Analytics</span>
+        <span class="tag">Optimization</span>
+        <span class="tag">Statistics</span>
+        <span class="tag">Dashboards</span>
+      </div>
+
+      <!-- Optional: add a small line for what you're looking for -->
+      <p class="muted" style="margin-top: 12px;">
+        Interests: data engineering, analytics engineering, and applied ML projects.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>What I’m Building</h3>
+      <p>
+        I like projects with real operational constraints—where accuracy, reliability, and maintainability matter.
+        Recent work includes predictive modeling, database design, and automation tooling.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Outside of Work</h3>
+      <p>
+        I’m always learning and refining my craft—whether that’s improving a pipeline, exploring a new modeling technique,
+        or iterating on how to communicate results more clearly.
+      </p>
+    </div>
+  </section>
+</main>
