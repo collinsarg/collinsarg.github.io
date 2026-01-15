@@ -62,5 +62,14 @@ and performance dashboards for fleet operations.",
     ],
     tags: ["Android", "Kotlin"],
     images: ["assets/android/snapshot1.png", "assets/android/snapshot2.png"]
+  },
+  stock:{
+    slug: "stock",
+    title: "Stock Split Indicator",
+    summary: 
+      "",
+    details: [
+      "Built a historical market dataset and predictive framework to identify potential stock splits using trend-based feature engineering and back testing, packaging results into a repeatable workflow and stakeholder-ready insights.",
+    ]
   }
 };
