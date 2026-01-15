@@ -160,11 +160,9 @@ main, section.content, .content {
 }
 
 .about-photo img{
-    width: 120px;
-    height: 120px;
+   max-width: 160px;
+    height: 160px;
     object-fit: cover;
-    border-radius: 16px;
-    border: 16px;
     display: block;
 }
 
