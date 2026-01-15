@@ -32,7 +32,7 @@ and performance dashboards for fleet operations.",
       "Cubic spline variants (clamped, natural) with comparison plots.",
       "Error analysis and visualizations of node choices."
     ],
-    tags: ["Numerical", "Python"],
+    tags: ["Search Algoriths", "R"],
     images: ["assets/interp/snapshot1.png", "assets/interp/snapshot2.png"]
   },
 
