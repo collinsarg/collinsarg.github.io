@@ -1,74 +1,73 @@
 <main class="content">
+  <!-- HERO ROW: photo + intro -->
   <section class="about-hero">
     <div class="about-photo">
-      <!-- Replace with your image path -->
-      <img src="images/collin-headshot.jpeg" alt="Portrait of Collin Sargent" />
+      <!-- Put your headshot in: /images/collin-headshot.jpg -->
+      <img src="images/collin-headshot.jpg" alt="Portrait of Collin Sargent" />
     </div>
 
-    <div class="about-intro">
+    <div>
       <h2>About Me</h2>
 
-      <p class="lead">
-        I’m a Mathematics graduate with a Computer Science minor from Western Washington University.
-        I bridge theory and application—from relational data modeling and SQL engineering to numerical analysis and optimization.
+      <p class="about-lead">
+        I’m a graduate in Mathematics with a Computer Science minor from Western Washington University.
+        My work bridges theory and application—from relational data models and SQL engineering to numerical analysis and optimization.
       </p>
 
-      <p>
+      <p class="muted">
         I enjoy building clean data pipelines, modeling complex systems, and telling compelling stories with data.
       </p>
 
-      <div class="about-cta">
+      <div class="about-actions">
         <a class="btn" href="projects.html">View Projects</a>
-        <a class="btn outline" href="contact.html">Get in Touch</a>
-        <!-- Optional: add your resume -->
+        <a class="btn outline" href="contact.html">Contact</a>
+        <!-- Optional -->
         <!-- <a class="btn small" href="assets/Collin_Sargent_Resume.pdf" target="_blank" rel="noopener">Resume</a> -->
       </div>
     </div>
   </section>
 
-  <section class="about-grid">
-    <div class="card">
+  <!-- DETAILS GRID: reuses your .grid and .card -->
+  <section class="grid about-details">
+    <article class="card">
       <h3>Quick Highlights</h3>
-      <ul class="bullets">
-        <li>Data engineering focus: SQL, pipelines, and analytics-ready schemas</li>
+      <ul class="about-list">
+        <li>Data engineering focus: SQL, schemas, ingestion, and analytics-ready datasets</li>
         <li>Strong math foundation: optimization, modeling, and numerical methods</li>
-        <li>Practical builder: turning messy inputs into reliable, repeatable outputs</li>
+        <li>Builder mindset: reliable systems, clear metrics, and maintainable code</li>
       </ul>
-    </div>
+    </article>
 
-    <div class="card">
+    <article class="card">
       <h3>Core Skills</h3>
-      <div class="tag-list">
-        <span class="tag">SQL</span>
-        <span class="tag">Data Modeling</span>
-        <span class="tag">Python</span>
-        <span class="tag">ETL / ELT</span>
-        <span class="tag">Analytics</span>
-        <span class="tag">Optimization</span>
-        <span class="tag">Statistics</span>
-        <span class="tag">Dashboards</span>
-      </div>
+      <ul class="tags">
+        <li>SQL</li>
+        <li>Data Modeling</li>
+        <li>Python</li>
+        <li>ETL / ELT</li>
+        <li>Analytics</li>
+        <li>Optimization</li>
+        <li>Statistics</li>
+        <li>Dashboards</li>
+      </ul>
+      <p class="muted about-note">Interested in data engineering, analytics engineering, and applied ML projects.</p>
+    </article>
 
-      <!-- Optional: add a small line for what you're looking for -->
-      <p class="muted" style="margin-top: 12px;">
-        Interests: data engineering, analytics engineering, and applied ML projects.
-      </p>
-    </div>
-
-    <div class="card">
+    <article class="card">
       <h3>What I’m Building</h3>
       <p>
-        I like projects with real operational constraints—where accuracy, reliability, and maintainability matter.
-        Recent work includes predictive modeling, database design, and automation tooling.
+        I gravitate toward projects with real constraints—where accuracy, reliability, and repeatability matter.
+        Recent work includes predictive modeling, database design, and automation.
       </p>
-    </div>
+      <a class="chip" href="projects.html">Browse projects</a>
+    </article>
 
-    <div class="card">
+    <article class="card">
       <h3>Outside of Work</h3>
       <p>
-        I’m always learning and refining my craft—whether that’s improving a pipeline, exploring a new modeling technique,
-        or iterating on how to communicate results more clearly.
+        I’m always iterating—whether that’s refining a pipeline, exploring new modeling techniques,
+        or improving how results are communicated to stakeholders.
       </p>
-    </div>
+    </article>
   </section>
 </main>
