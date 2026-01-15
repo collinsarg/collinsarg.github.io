@@ -1,72 +1,91 @@
-<main class="content">
-  <section class="about-hero">
-    <div class="about-photo">
-      <!-- Put your headshot in: /images/collin-headshot.jpg -->
-      <img src="images/collin-headshot.jpeg" alt="Portrait of Collin Sargent" />
-    </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Collin Sargent</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Collin Sargent</a></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button id="themeToggle" class="btn small" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+    </header>
 
-    <div>
-      <h2>About Me</h2>
+    <main class="content">
+    <section class="about-hero">
+        <div class="about-photo">
+        <!-- Put your headshot in: /images/collin-headshot.jpg -->
+        <img src="images/collin-headshot.jpeg" alt="Portrait of Collin Sargent" />
+        </div>
 
-      <p class="about-lead">
-        I’m a graduate in Mathematics with a Computer Science minor from Western Washington University.
-        My work bridges theory and application—from relational data models and SQL engineering to numerical analysis and optimization.
-      </p>
+        <div>
+        <h2>About Me</h2>
 
-      <p class="muted">
-        I enjoy building clean data pipelines, modeling complex systems, and telling compelling stories with data.
-      </p>
+        <p class="about-lead">
+            I’m a graduate in Mathematics with a Computer Science minor from Western Washington University.
+            My work bridges theory and application—from relational data models and SQL engineering to numerical analysis and optimization.
+        </p>
 
-      <div class="about-actions">
-        <a class="btn" href="projects.html">View Projects</a>
-        <a class="btn outline" href="contact.html">Contact</a>
-        <!-- Optional -->
-        <!-- <a class="btn small" href="assets/Collin_Sargent_Resume.pdf" target="_blank" rel="noopener">Resume</a> -->
-      </div>
-    </div>
-  </section>
+        <p class="muted">
+            I enjoy building clean data pipelines, modeling complex systems, and telling compelling stories with data.
+        </p>
 
-  <!-- DETAILS GRID: reuses your .grid and .card -->
-  <section class="grid about-details">
-    <article class="card">
-      <h3>Quick Highlights</h3>
-      <ul class="about-list">
-        <li>Data engineering focus: SQL, schemas, ingestion, and analytics-ready datasets</li>
-        <li>Strong math foundation: optimization, modeling, and numerical methods</li>
-        <li>Builder mindset: reliable systems, clear metrics, and maintainable code</li>
-      </ul>
-    </article>
+        <div class="about-actions">
+            <a class="btn" href="projects.html">View Projects</a>
+            <a class="btn outline" href="contact.html">Contact</a>
+            <!-- Optional -->
+            <!-- <a class="btn small" href="assets/Collin_Sargent_Resume.pdf" target="_blank" rel="noopener">Resume</a> -->
+        </div>
+        </div>
+    </section>
 
-    <article class="card">
-      <h3>Core Skills</h3>
-      <ul class="tags">
-        <li>SQL</li>
-        <li>Data Modeling</li>
-        <li>Python</li>
-        <li>ETL / ELT</li>
-        <li>Analytics</li>
-        <li>Optimization</li>
-        <li>Statistics</li>
-        <li>Dashboards</li>
-      </ul>
-      <p class="muted about-note">Interested in data engineering, analytics engineering, and applied ML projects.</p>
-    </article>
+    <!-- DETAILS GRID: reuses your .grid and .card -->
+    <section class="grid about-details">
+        <article class="card">
+        <h3>Quick Highlights</h3>
+        <ul class="about-list">
+            <li>Data engineering focus: SQL, schemas, ingestion, and analytics-ready datasets</li>
+            <li>Strong math foundation: optimization, modeling, and numerical methods</li>
+            <li>Builder mindset: reliable systems, clear metrics, and maintainable code</li>
+        </ul>
+        </article>
 
-    <article class="card">
-      <h3>What I’m Building</h3>
-      <p>
-        I gravitate toward projects with real constraints—where accuracy, reliability, and repeatability matter.
-        Recent work includes predictive modeling, database design, and automation.
-      </p>
-      <a class="chip" href="projects.html">Browse projects</a>
-    </article>
+        <article class="card">
+        <h3>Core Skills</h3>
+        <ul class="tags">
+            <li>SQL</li>
+            <li>Data Modeling</li>
+            <li>Python</li>
+            <li>ETL / ELT</li>
+            <li>Analytics</li>
+            <li>Optimization</li>
+            <li>Statistics</li>
+            <li>Dashboards</li>
+        </ul>
+        <p class="muted about-note">Interested in data engineering, analytics engineering, and applied ML projects.</p>
+        </article>
 
-    <article class="card">
-      <h3>Outside of Work</h3>
-      <p>
-        I’m always iterating—whether that’s refining a pipeline, exploring new modeling techniques,
-        or improving how results are communicated to stakeholders.
-      </p>
-    </article>
-  </section>
+        <article class="card">
+        <h3>What I’m Building</h3>
+        <p>
+            I gravitate toward projects with real constraints—where accuracy, reliability, and repeatability matter.
+            Recent work includes predictive modeling, database design, and automation.
+        </p>
+        <a class="chip" href="projects.html">Browse projects</a>
+        </article>
+
+        <article class="card">
+        <h3>Outside of Work</h3>
+        <p>
+            I’m always iterating—whether that’s refining a pipeline, exploring new modeling techniques,
+            or improving how results are communicated to stakeholders.
+        </p>
+        </article>
+</section>
 </main>
