@@ -68,7 +68,7 @@ and performance dashboards for fleet operations.",
     slug: "stock",
     title: "Stock Split Indicator",
     summary: 
-      "Using historical data to detect tends in current stock prices to determine when stock splits will happen.",
+      "Power Bi report backed historical data to detecting tends in current stock prices to predict stock splits.",
     details: [
       "Built a historical market dataset and predictive framework to identify potential stock splits using trend-based feature engineering and back testing, packaging results into a repeatable workflow and stakeholder-ready insights.",
     ],
