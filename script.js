@@ -159,7 +159,7 @@ function renderProjectPage() {
       </div>
       <div class="card">
         <h3>Screenshots</h3>
-        <div class="gallery" style="margin-top:.5rem">${images || '<p class="muted">Add images in project-data.js</p>'}</div>
+        <div class="gallery" style="margin-top:.5rem">${images || '<p class="muted">Images Comming Soon</p>'}</div>
       </div>
     </div>
 
