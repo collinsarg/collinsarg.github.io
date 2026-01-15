@@ -1,6 +1,5 @@
 
 // project-data.js
-// Edit this file to add/update projects and image snapshots.
 
 window.PROJECTS = {
   dsp: {
@@ -74,5 +73,20 @@ and performance dashboards for fleet operations.",
     tags: ["Search Algoriths", "R"],
     images: ["assets/interp/snapshot1.png", "assets/interp/snapshot2.png"]
   },
+
+  house: {
+    slug: "house",
+    title:"House Price Estimator",
+    summary:
+      "Built a machine learning model to estimate home prices from key property features (e.g., location, size, beds/baths) and deliver fast, data-driven price predictions.",
+    details: [
+      "End-to-end preprocessing, model training/evaluation, and a simple interface for generating estimates from new inputs.",
+      "Built a full preprocessing pipeline (missing values, outlier handling, categorical encoding, feature scaling).",
+      "Performed feature engineering (price per sq ft, neighborhood/zip aggregations, interaction features).",
+      "Compared multiple models and tuned hyperparameters to improve accuracy and reduce error.",
+      "Evaluated performance with train/validation splits and metrics like MAE/RMSE; validated against baseline models."
+    ],
+    tags: ["Python", "SQL", "NumPy", "pandas"]
+  }
 
 };
