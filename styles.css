@@ -160,12 +160,11 @@ main, section.content, .content {
 }
 
 .about-photo img{
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 16px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
+    border: 16px;
     display: block;
 }
 
