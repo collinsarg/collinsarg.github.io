@@ -21,20 +21,17 @@ and performance dashboards for fleet operations.",
       "assets/dsp/snapshot3.png"
     ]
   },
-
-  interp: {
-    slug: "interp",
-    title: "Interpolation Toolkit",
-    summary:
-      "Chebyshev nodes, Newton’s divided differences, and clamped cubic splines for smooth approximations.",
+    stock:{
+    slug: "stock",
+    title: "Stock Split Indicator",
+    summary: 
+      "Power Bi report backed historical data to detecting tends in current stock prices to predict stock splits.",
     details: [
-      "Cosine calculator via Chebyshev interpolation and Newton form.",
-      "Cubic spline variants (clamped, natural) with comparison plots.",
-      "Error analysis and visualizations of node choices."
+      "Built a historical market dataset and predictive framework to identify potential stock splits using trend-based feature engineering and back testing, packaging results into a repeatable workflow and stakeholder-ready insights.",
     ],
-    tags: ["Search Algoriths", "R"],
-    images: ["assets/interp/snapshot1.png", "assets/interp/snapshot2.png"]
+    tags: ["Python", "SQL", "Power BI"]
   },
+
 
   opt: {
     slug: "opt",
@@ -64,14 +61,18 @@ and performance dashboards for fleet operations.",
     images: ["assets/android/snapshot1.png", "assets/android/snapshot2.png"]
   },
 
-  stock:{
-    slug: "stock",
-    title: "Stock Split Indicator",
-    summary: 
-      "Power Bi report backed historical data to detecting tends in current stock prices to predict stock splits.",
+  interp: {
+    slug: "interp",
+    title: "Interpolation Toolkit",
+    summary:
+      "Chebyshev nodes, Newton’s divided differences, and clamped cubic splines for smooth approximations.",
     details: [
-      "Built a historical market dataset and predictive framework to identify potential stock splits using trend-based feature engineering and back testing, packaging results into a repeatable workflow and stakeholder-ready insights.",
+      "Cosine calculator via Chebyshev interpolation and Newton form.",
+      "Cubic spline variants (clamped, natural) with comparison plots.",
+      "Error analysis and visualizations of node choices."
     ],
-    tags: ["Python", "SQL", "Power BI"]
-  }
+    tags: ["Search Algoriths", "R"],
+    images: ["assets/interp/snapshot1.png", "assets/interp/snapshot2.png"]
+  },
+
 };
