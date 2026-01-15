@@ -149,4 +149,81 @@ main, section.content, .content {
 /* helper */
 .muted { color: var(--muted); }
 
+/* --- About page enhancements (fits existing theme) --- */
+.about-hero{
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: .5rem;
+    margin-bottom: 1.25rem;
+}
+
+.about-photo img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    display: block;
+}
+
+.about-lead{
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: .75rem;
+}
+
+.about-actions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+/* Outline button variant that matches your .btn */
+.btn.outline{
+    background: transparent;
+    color: #fff;                 /* looks good on header if reused */
+    color: var(--brand-900);     /* matches body sections */
+    border: 1px solid var(--border);
+    box-shadow: none;
+}
+:root.dark .btn.outline{
+    color: var(--text);
+    border-color: var(--border);
+}
+
+/* Cleaner bullet list inside cards */
+.about-list{
+    margin-top: .75rem;
+    padding-left: 1.1rem;
+}
+.about-list li{
+    margin: .35rem 0;
+    color: var(--muted);
+}
+
+/* Small spacing helper inside skill card */
+.about-note{
+    margin-top: .75rem;
+}
+
+/* Slight spacing between hero and grid on about page */
+.about-details{
+    margin-top: .5rem;
+}
+
+/* Responsive */
+@media (max-width: 780px){
+    .about-hero{
+        grid-template-columns: 1fr;
+    }
+    .about-photo img{
+        width: 140px;
+        height: 140px;
+    }
+}
 
