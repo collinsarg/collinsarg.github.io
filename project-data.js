@@ -72,6 +72,6 @@ and performance dashboards for fleet operations.",
     details: [
       "Built a historical market dataset and predictive framework to identify potential stock splits using trend-based feature engineering and back testing, packaging results into a repeatable workflow and stakeholder-ready insights.",
     ],
-    tags: ["Java", "Python", "SQL", "Power BI"]
+    tags: ["Python", "SQL", "Power BI"]
   }
 };
